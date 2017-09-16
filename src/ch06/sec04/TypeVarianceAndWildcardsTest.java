@@ -36,4 +36,15 @@ public class TypeVarianceAndWildcardsTest {
             }
         }
     }
+
+    public static <T> void printAll(T[] elements, Predicate<? super T> filter) {
+
+        for (T element : elements) {
+
+            if (filter.test(element)) {
+
+                System.out.println(element.toString());
+            }
+        }
+    }
 }

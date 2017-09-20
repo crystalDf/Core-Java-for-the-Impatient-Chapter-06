@@ -35,4 +35,25 @@ public class RestrictionsOnGenerics {
 
         return result;
     }
+
+    private static <T> T[] repeat(int n, T object, T[] array) {
+
+        T[] result;
+
+        if (array.length >= n) {
+
+            result = array;
+        } else {
+
+            T[] newArray = (T[]) Array.newInstance(array.getClass().getComponentType(), n);
+            result = newArray;
+        }
+
+        for (int i = 0; i < n; i++) {
+
+            result[i] = object;
+        }
+
+        return result;
+    }
 }

@@ -1,6 +1,7 @@
 package ch06.sec06;
 
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.function.IntFunction;
 
 public class RestrictionsOnGenerics {
@@ -52,6 +53,18 @@ public class RestrictionsOnGenerics {
         for (int i = 0; i < n; i++) {
 
             result[i] = object;
+        }
+
+        return result;
+    }
+
+    private static <T> ArrayList<T> repeat(int n, T object) {
+
+        ArrayList<T> result = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+
+            result.add(object);
         }
 
         return result;

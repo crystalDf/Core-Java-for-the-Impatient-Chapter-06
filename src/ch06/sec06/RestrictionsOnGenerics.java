@@ -11,6 +11,8 @@ public class RestrictionsOnGenerics {
         String[] greetings = repeat(10, "hi", String[]::new);
 
         greetings = repeat(10, "hi", String.class);
+
+
     }
 
     private static <T> T[] repeat(int n, T object, IntFunction<T[]> constructor) {

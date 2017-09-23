@@ -71,4 +71,16 @@ public class RestrictionsOnGenerics {
 
         return result;
     }
+
+    private static <T> ArrayList<T> asList(T... elements) {
+
+        ArrayList<T> result = new ArrayList<>();
+
+        for (T element : elements) {
+
+            result.add(element);
+        }
+
+        return result;
+    }
 }

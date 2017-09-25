@@ -1,4 +1,4 @@
-package ch06.sec01;
+package ch06.ex03;
 
 public class Entry<K, V> {
 

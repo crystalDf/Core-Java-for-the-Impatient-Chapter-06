@@ -1,6 +1,6 @@
 package ch06.ex07;
 
-public class Pair<E> {
+public class Pair<E extends Comparable<E>> {
 
     private E first;
     private E second;
@@ -16,5 +16,13 @@ public class Pair<E> {
 
     public E getSecond() {
         return second;
+    }
+
+    public E getMax() {
+        return first.compareTo(second) < 0 ? second : first;
+    }
+
+    public E getMin() {
+        return first.compareTo(second) < 0 ? first : second;
     }
 }
